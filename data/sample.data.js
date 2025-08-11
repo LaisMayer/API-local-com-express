@@ -7,5 +7,5 @@ const dados = [
     {id: 6, nome: "Arthur", idade: 17, profissao: "desempregado"}
 ]
 
-
+export default dados;
 module.exports = dados;

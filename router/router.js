@@ -1,15 +1,9 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from "express";
+import { getAllDados } from "../crontollers/controller";
 
-const dados = require('../data/sample.data');
+const rota = Router();
 
-router.get('/dados',(req, res) => {
-    res.json(dados);
-});
+// rota para retornar dados
+rota.get('/', getAllDados);
 
-router.get('/dados/:id', (rec,res) =>{
-    const id = parseInt(rec.params.id);
-    const dados = dados.find(p=> p.id === id);
-});
-
-module.express = router;
+export default rota;

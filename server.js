@@ -1,17 +1,15 @@
-const express = require('express');
+import dataRoutes from '.router/router.js';
+import express from 'express';
 const app = express();
-const router = require('./router/router');
 
-const porta = 3000;
+const PORT = process.env.PORT || 3000;
 
+// middçeware para interpretar o json
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    req.redirect('/api/dados')
-});
+//rota da api
+app.use('/', dataRoutes);
 
-app.use('/api', router);
-
-app.lista(porta, () => {
-    console.log(`O servidor está rodando em : http://localhost:${porta}/api/dados`);
+app.listen(PORT, () => {
+    console.log("Servidor rodando na porta 3000");
 });
