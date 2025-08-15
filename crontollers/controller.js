@@ -1,6 +1,6 @@
-import exemploDados from '../dados/exemploDados.js';
+import dados from '../data/sample.data.js';
 
 export const getAllDados = (req, res) => {
     console.log("Função getDados foi chamada");
-    res.json(exemploDados);
+    res.json(dados);
 };

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getAllDados } from "../crontollers/controller";
+import { getAllDados } from "../crontollers/controller.js";
 
 const rota = Router();
 

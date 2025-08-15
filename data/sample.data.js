@@ -8,4 +8,4 @@ const dados = [
 ]
 
 export default dados;
-module.exports = dados;
+// module.exports = dados;
